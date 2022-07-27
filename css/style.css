@@ -1,0 +1,147 @@
+/* Variables */
+:root{
+    --spacing: 100px;
+    --border: 2px;
+    --list-space: 4rem;
+    --color-pink: #e92efb;
+    --color-violet: #ff2079;
+    --color-purple: #440bd4;
+    --color-darkblue: #04005e;
+    --color-black: #000000;
+}
+/* Principal */
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    background-color: var(--color-darkblue);
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Navigation bar*/
+header{
+    position: fixed;
+    width: var(--spacing);
+    height: 100%;
+    z-index: 3;
+    
+}
+
+.nav{  
+    height: 100%;
+    background-color: var(--color-black);    
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;    
+    border-right: var(--border) solid;    
+    border-color: var(--color-pink); 
+    animation: navigation 4s linear 0s infinite alternate;
+
+}
+
+.logo{
+    font-size: 80px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    border-bottom: var(--border) white solid;
+}
+
+.logo:hover{
+    text-shadow: 0px 0px 20px white;
+}
+
+.name{
+    font-size: 1.5em;
+    font-family: 'VT323', sans-serif;
+}
+
+.list{
+    margin-top: 50px;
+    height: 50%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list li{
+    border-radius: 30%;
+    border: var(--border) solid;
+    border-color: var(--color-violet);
+    width: var(--list-space);
+    height: var(--list-space);
+    background-color: var(--color-darkblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.list li:hover{
+    box-shadow: 0px 0px 20px 8px var(--color-violet);
+}
+
+.material-symbols-outlined{
+    
+    opacity: 0.7;
+}
+
+.material-symbols-outlined:hover{
+    opacity: 1;
+    
+}
+
+
+/* Main */
+.sections{
+    margin-left: calc(var(--spacing) + var(--border));
+    z-index: 2;
+}
+.sections section{
+    width:100%;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
+.about{
+    display: flex;
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    color: black;
+    
+}
+.skills{
+
+}
+
+/*Animaciones*/
+@keyframes navigation{
+    from{
+        border-color: var(--color-pink);
+        box-shadow: 0px 0px 0px 0px var(--color-pink);
+
+    }
+    to{
+        border-color: var(--color-violet);
+        box-shadow: 4px 0px 0.5px 0.2px var(--color-violet); 
+    }
+}
+
+
