@@ -16,7 +16,6 @@ function About() {
       scrollTrigger: {
         trigger: "#about",
         start: "top 200px",
-        markers: true,
         toggleActions: "play",
       },
     });
