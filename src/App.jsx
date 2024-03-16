@@ -1,8 +1,16 @@
+import NavBar from "./components/NavBar";
+import About from "./components/Sections/About";
+import Home from "./components/Sections/Home";
+
 function App() {
   return (
-    <main className="w-[100vw] h-[100vh] flex justify-center items-center bg-Tuna">
-      <p className="text-Oxley text-[400px]">Portfolio</p>
-    </main>
+    <>
+      <NavBar />
+      <main>
+        <Home />
+        <About />
+      </main>
+    </>
   );
 }
 
