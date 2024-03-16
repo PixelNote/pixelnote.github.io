@@ -1,10 +1,8 @@
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Close from "../assets/Icons/Close.jsx";
-import Menu from "../assets/Icons/Menu.jsx";
-
-gsap.registerPlugin(useGSAP);
+import Close from "./Icons/Close.jsx";
+import Menu from "./Icons/Menu.jsx";
 
 function NavBar() {
   const container = useRef();
@@ -46,7 +44,7 @@ function NavBar() {
     <div ref={container}>
       <nav
         id="navbar"
-        className="flex flex-row justify-between items-center fixed w-[100vw] h-16 sm:h-20 bg-white lg:px-28 md:px-12 sm:px-8 px-5 drop-shadow-lg"
+        className="flex flex-row justify-between items-center fixed w-[100vw] h-16 sm:h-20 bg-white lg:px-28 md:px-12 sm:px-8 px-5 drop-shadow-lg z-20"
       >
         <p id="logo" className="text-3xl font-semibold opacity-0">
           <span className="text-Marble">[</span>PixelNote
@@ -70,14 +68,14 @@ function NavBar() {
         </ul>
       </nav>
       <div
-        className={`sm:hidden w-[100vw] h-[100vh] bg-transparent fixed ${
-          slider ? "translate-x-0" : "-translate-x-full"
+        className={`z-20 sm:hidden w-[100vw] h-[100vh] bg-transparent fixed ${
+          slider ? "-translate-x-0" : "translate-x-full"
         } transition-all duration-300 backdrop-filter backdrop-blur-md border border-gray-400 shadow-lg`}
       >
         <div className="absolute right-5 top-5" onClick={handleSlider}>
           <Close size={30} />
         </div>
-        <ul className="flex flex-col w-full h-full justify-center items-center gap-10 text-2xl">
+        <ul className="flex flex-col w-full h-full justify-center items-center gap-10 text-4xl font-medium">
           {sections.map((section, sindex) => (
             <li key={sindex} className="hover:cursor-pointer hover:text-Marble">
               {section}
