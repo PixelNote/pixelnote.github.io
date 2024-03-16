@@ -47,7 +47,7 @@ function Home() {
   );
 
   return (
-    <Section classes={"relative"}>
+    <Section id={"home"} classes={"relative"}>
       <div ref={container}>
         <div className="absolute left-[10%] top-[25%]">
           <Dots
@@ -61,18 +61,18 @@ function Home() {
           id="text"
           className="flex flex-col xl:text-[160px] md:text-9xl sm:text-7xl text-5xl font-semibold"
         >
-          <p>Hi I&apos;m Andres</p>
+          <p>Hi, I&apos;m Andres</p>
           <p
             className="text-white -mt-2"
             style={{
-              WebkitTextStroke: "1px black",
-              MozTextStroke: "1px black",
-              textStroke: "1px black",
+              WebkitTextStroke: "2px black",
+              MozTextStroke: "2px black",
+              textStroke: "2px black",
             }}
           >
-            Hi I&apos;m Andres
+            Hi, I&apos;m Andres
           </p>
-          <p className="sm:hidden -mt-2">Hi I&apos;m Andres</p>
+          <p className="sm:hidden -mt-2">Hi, I&apos;m Andres</p>
         </div>
 
         <p
@@ -90,7 +90,7 @@ function Home() {
         />
         <div
           id="wave"
-          className="absolute bg-white sm:w-[40px] w-[30px] h-[130px] bottom-[240px] right-[40px]"
+          className="absolute bg-white sm:w-[40px] w-[30px] h-[50px] bottom-[240px] right-[40px]"
         ></div>
       </div>
     </Section>
