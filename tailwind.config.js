@@ -8,6 +8,7 @@ export default {
         Spruce: "#344955",
         Marble: "#50727B",
         Oxley: "#78A083",
+        LightGrey: "#D9D9D9",
       },
     },
   },

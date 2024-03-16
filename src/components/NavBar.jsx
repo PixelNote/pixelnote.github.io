@@ -53,12 +53,11 @@ function NavBar() {
         <ul className="text-xl">
           <div className="flex-row hidden gap-4 md:gap-10 sm:flex font-medium">
             {sections.map((section, sindex) => (
-              <li
-                key={sindex}
-                className="links hover:cursor-pointer hover:text-Marble opacity-0"
-              >
-                {section}
-              </li>
+              <a href={`#${section.toLowerCase()}`} key={sindex}>
+                <li className="links hover:cursor-pointer hover:text-Marble opacity-0">
+                  {section}
+                </li>
+              </a>
             ))}
           </div>
 
@@ -77,9 +76,18 @@ function NavBar() {
         </div>
         <ul className="flex flex-col w-full h-full justify-center items-center gap-10 text-4xl font-medium">
           {sections.map((section, sindex) => (
-            <li key={sindex} className="hover:cursor-pointer hover:text-Marble">
-              {section}
-            </li>
+            <a
+              onClick={handleSlider}
+              href={`#${section.toLowerCase()}`}
+              key={sindex}
+            >
+              <li
+                key={sindex}
+                className="hover:cursor-pointer hover:text-Marble"
+              >
+                {section}
+              </li>
+            </a>
           ))}
         </ul>
       </div>
