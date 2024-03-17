@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Close from "./Icons/Close.jsx";
-import Menu from "./Icons/Menu.jsx";
+import Close from "./Icons/NavBar/Close.jsx";
+import Menu from "./Icons/NavBar/Menu.jsx";
 
 function NavBar() {
   const container = useRef();
