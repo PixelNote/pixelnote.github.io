@@ -1,6 +1,6 @@
 import Section from "../Section";
-import Dots from "../Icons/Dots";
-import Arrow from "../Icons/Arrow";
+import Dots from "../Icons/Home/Dots";
+import Arrow from "../Icons/Home/Arrow";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
