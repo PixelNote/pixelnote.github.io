@@ -20,29 +20,23 @@ function About() {
           trigger: "#about",
           start: "top 200px",
           toggleActions: "restart none none reverse",
-          markers: true,
         },
       });
-      st.from("#image", {
-        x: -50,
-        duration: 2,
-      })
-        .from(
-          "#text",
-          {
-            x: 50,
-            duration: 2,
-          },
-          "<"
-        )
-        .to(
-          "#image, #text",
-          {
-            opacity: 1,
-            duration: 2,
-          },
-          "<"
-        );
+      st.from(
+        "#text, #image",
+        {
+          x: 50,
+          duration: 1.5,
+        },
+        "<"
+      ).to(
+        "#image, #text",
+        {
+          opacity: 1,
+          duration: 1.5,
+        },
+        "<"
+      );
     },
     { scope: container }
   );
@@ -50,7 +44,9 @@ function About() {
     <div ref={container}>
       <Section
         id={"about"}
-        classes={"relative bg-LightGrey z-10 flex-col pt-24 p-5 lg:flex-row"}
+        classes={
+          "relative bg-LightGrey z-10 flex-col pt-24 p-5 lg:flex-row lg:gap-10"
+        }
       >
         <div
           id="image"
@@ -96,9 +92,9 @@ function About() {
         </div>
         <div
           id="text"
-          className="opacity-0 lg:bg-transparent bg-black xl:w-[40%] md:w-[60%] sm:w-[70%] w-[80%] h-auto lg:p-12 p-6 pt-0 rounded-b-xl"
+          className="opacity-0 lg:bg-Marble bg-black xl:w-[40%] md:w-[60%] sm:w-[70%] w-[80%] lg:h-[50%] lg:flex lg:items-center lg:p-16 p-6 pt-0 rounded-b-xl lg:rounded-lg"
         >
-          <p className="lg:text-black text-white text-justify font-light lg:text-2xl xl:text-3xl">
+          <p className="text-white lg:font-semibold text-justify font-light xl:text-3xl sm:text-xl md:text-2xl">
             <span className="lg:hidden pr-1 font-semibold">PixelNote </span>I am
             Andres Jimenez, a software developer born in Colombia. I am
             passionate in making creative solutions with quality and attention
