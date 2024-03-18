@@ -47,8 +47,8 @@ function NavBar() {
         className="flex flex-row justify-between items-center fixed w-[100vw] h-16 sm:h-20 bg-white lg:px-28 md:px-12 sm:px-8 px-5 drop-shadow-lg z-20"
       >
         <p id="logo" className="text-3xl font-semibold opacity-0">
-          <span className="text-Marble">[</span>PixelNote
-          <span className="text-Marble">]</span>
+          <span className="bracket text-Marble">[</span>PixelNote
+          <span className="bracket text-Marble">]</span>
         </p>
         <ul className="text-xl">
           <div className="flex-row hidden gap-4 md:gap-10 sm:flex font-medium">
