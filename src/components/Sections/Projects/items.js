@@ -1,6 +1,6 @@
 export const items = [
   {
-    img: "/src/components/Images/cosmic.jpeg",
+    img: "/Images/cosmic.jpeg",
     tech: ["Unity", "C#", "Blender"],
     info: {
       title: "Cosmic Outbreak",
@@ -9,7 +9,7 @@ export const items = [
     link: "https://hombrerex.itch.io/cosmic-outbreak",
   },
   {
-    img: "/src/components/Images/readlify.png",
+    img: "/Images/readlify.png",
     tech: ["JavaScript", "React", "Firebase"],
     info: {
       title: "Readlify",
@@ -18,7 +18,7 @@ export const items = [
     link: "https://github.com/PixelNote/biblioreact",
   },
   {
-    img: "/src/components/Images/dog.png",
+    img: "/Images/dog.png",
     tech: ["Java", "Spring Boot", "Vue"],
     info: {
       title: "Bebitos felices",

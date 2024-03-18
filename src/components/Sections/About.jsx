@@ -8,7 +8,7 @@ import Comment from "../Icons/About/Comment";
 import Share from "../Icons/About/Share";
 import Save from "../Icons/About/Save";
 import Ellipse from "../Icons/About/Ellipse";
-import Person from "../Images/Person.png";
+import Person from "/Images/Person.png";
 
 function About() {
   const container = useRef();
