@@ -59,7 +59,7 @@ function Home() {
 
         <div
           id="text"
-          className="flex flex-col xl:text-[160px] md:text-9xl sm:text-7xl text-5xl font-semibold"
+          className="flex flex-col xl:text-[160px] md:text-9xl sm:text-7xl text-5xl font-semibold z-20"
         >
           <p>Hi, I&apos;m Andres</p>
           <p

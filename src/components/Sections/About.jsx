@@ -45,14 +45,14 @@ function About() {
       <Section
         id={"about"}
         classes={
-          "relative bg-LightGrey z-10 flex-col pt-24 p-5 lg:flex-row lg:gap-10"
+          "relative bg-LightGrey z-10 flex-col pt-24 p-5 lg:flex-row lg:gap-10 h-auto pb-20"
         }
       >
         <div
           id="image"
-          className="opacity-0 relative bg-gradient-to-r from-Marble to-Oxley min-[1300px]:w-[520px] xl:w-[400px] md:w-[60%] sm:w-[70%] w-[80%] h-auto rounded-lg"
+          className="opacity-0 relative bg-gradient-to-r from-Marble to-Oxley min-[1300px]:w-[520px] xl:w-[400px] md:w-[60%] sm:w-[70%] w-[80%] h-auto rounded-lg image"
         >
-          <div className="absolute top-0 bg-black w-full h-[12%] flex items-center lg:px-5 px-3 gap-2 rounded-t-lg">
+          <div className="absolute top-0 bg-black w-full h-[12%] flex items-center lg:px-5 px-3 gap-2 rounded-t-lg lg:rounded-t-xl z-20">
             <Ellipse
               size={24}
               color={"#50727B"}
@@ -62,9 +62,13 @@ function About() {
               PixelNote
             </p>
           </div>
-          <img src={Person} className="object-cover w-[100%] h-auto" />
-          <div className="absolute bottom-0 bg-black w-full h-[12%] flex justify-between items-center px-3 lg:rounded-b-lg">
-            <div className="flex flex-row gap-3">
+          <img
+            id="maski"
+            src={Person}
+            className="object-cover w-[100%] h-auto"
+          />
+          <div className="absolute bottom-0 bg-black w-full h-[12%] flex justify-between items-center px-3 lg:rounded-b-xl">
+            <div className="flex flex-row gap-3 z-20">
               <Like
                 size={24}
                 color={"#FF3040"}

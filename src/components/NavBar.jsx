@@ -62,7 +62,7 @@ function NavBar() {
           </div>
 
           <li className="sm:hidden flex justify-center" onClick={handleSlider}>
-            <Menu size={28} />
+            <Menu id={"menu"} size={28} />
           </li>
         </ul>
       </nav>
@@ -72,9 +72,12 @@ function NavBar() {
         } transition-all duration-300 backdrop-filter backdrop-blur-md border border-gray-400 shadow-lg`}
       >
         <div className="absolute right-5 top-5" onClick={handleSlider}>
-          <Close size={30} />
+          <Close id={"close"} size={30} />
         </div>
-        <ul className="flex flex-col w-full h-full justify-center items-center gap-10 text-4xl font-medium">
+        <ul
+          id="slider"
+          className="flex flex-col w-full h-full justify-center items-center gap-10 text-4xl font-medium"
+        >
           {sections.map((section, sindex) => (
             <a
               onClick={handleSlider}
