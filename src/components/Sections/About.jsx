@@ -45,7 +45,7 @@ function About() {
       <Section
         id={"about"}
         classes={
-          "relative bg-LightGrey z-10 flex-col pt-24 p-5 lg:flex-row lg:gap-10 h-auto pb-20"
+          "relative z-10 flex-col pt-24 p-5 lg:flex-row lg:gap-10 h-auto pb-20"
         }
       >
         <div
@@ -96,7 +96,7 @@ function About() {
         </div>
         <div
           id="text"
-          className="opacity-0 lg:bg-Marble bg-black xl:w-[40%] md:w-[60%] sm:w-[70%] w-[80%] lg:h-[50%] lg:flex lg:items-center lg:p-16 p-6 pt-0 rounded-b-xl lg:rounded-lg"
+          className="opacity-0 bg-black xl:w-[40%] md:w-[60%] sm:w-[70%] w-[80%] lg:h-[50%] lg:flex lg:items-center lg:p-16 p-6 pt-0 rounded-b-xl lg:rounded-lg"
         >
           <p className="text-white lg:font-semibold text-justify font-light xl:text-3xl sm:text-xl md:text-2xl">
             <span className="lg:hidden pr-1 font-semibold">PixelNote </span>I am

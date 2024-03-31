@@ -6,17 +6,21 @@ import NavBar from "./components/NavBar";
 import About from "./components/Sections/About";
 import Home from "./components/Sections/Home";
 import Projects from "./components/Sections/Projects/Projects";
+import Quote from "./components/Sections/Quote";
+import SplitType from "split-type";
 
 function App() {
   const main = useRef();
+  const split = new SplitType("#quote-text");
+  console.log(split);
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(
     () => {
       const mn = gsap.timeline({
         scrollTrigger: {
           trigger: "#projects",
-          start: "top 300px",
-          toggleActions: "restart none none reverse",
+          start: "top 40%",
+          toggleActions: "restart reverse restart reverse",
         },
       });
       mn.to("#navbar", {
@@ -49,6 +53,11 @@ function App() {
           },
           "<"
         )
+        .from("#projects-title", {
+          opacity: 0,
+          y: -40,
+          duration: 1,
+        })
         .from(
           ".images-left, .texts-left",
           {
@@ -90,6 +99,50 @@ function App() {
           },
           "<"
         );
+
+      const qt = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#quote",
+          start: "top 40%",
+          end: "bottom 80%",
+          toggleActions: "restart reverse restart reverse",
+        },
+      });
+      qt.to("#navbar", {
+        backgroundColor: "#35374B",
+        color: "#78A083",
+        duration: 1,
+      })
+        .to(
+          "#quote",
+          {
+            backgroundColor: "#344955",
+            color: "#78A083",
+            duration: 1,
+          },
+          "<"
+        )
+        .to(
+          "#home",
+          {
+            backgroundColor: "#344955",
+            duration: 1,
+          },
+          "<"
+        )
+        .to(
+          "#about",
+          {
+            backgroundColor: "#344955",
+            duration: 1,
+          },
+          "<"
+        )
+        .to(".char", {
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.1,
+        });
     },
     { scope: main }
   );
@@ -99,6 +152,7 @@ function App() {
       <NavBar />
       <main>
         <Home />
+        <Quote />
         <About />
         <Projects />
       </main>

@@ -16,6 +16,12 @@ function Projects() {
           "bg-white w-full h-auto flex flex-col justify-center items-center md:gap-12 gap-20 pt-36 pb-10"
         }
       >
+        <p
+          id="projects-title"
+          className="font-semibold text-4xl -mb-5 sm:-mb-0 md:mb-5"
+        >
+          Projects
+        </p>
         {items.map((item, index) => (
           <div
             className={`${

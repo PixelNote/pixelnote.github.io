@@ -24,24 +24,28 @@ function Home() {
         duration: 2,
         ease: "power3.out",
       });
-      gsap
-        .timeline()
-        .from("#scroll", {
-          y: 20,
-          opacity: 0,
-          duration: 0.5,
-          ease: "power1.out",
-        })
-        .to("#wave", {
-          y: 290,
-          duration: 2,
-          delay: 2,
-          repeat: 3,
-          repeatDelay: 2,
-        })
-        .set("#wave", {
-          y: 0,
-        });
+      const opacity = () => {
+        gsap
+          .timeline()
+          .to("#scroll", {
+            opacity: 0,
+            duration: 2,
+            ease: "power1.in",
+          })
+          .to("#scroll", {
+            opacity: 1,
+            duration: 2,
+            ease: "power1.out",
+          })
+          .repeat(3);
+      };
+      gsap.timeline().from("#scroll", {
+        y: 20,
+        opacity: 0,
+        duration: 2,
+        ease: "power1.out",
+        onComplete: opacity,
+      });
     },
     { scope: container }
   );
@@ -88,10 +92,6 @@ function Home() {
             "absolute sm:right-[25px] sm:bottom-[80px] bottom-[100px] right-[28px] sm:w-[70px] sm:h-[70px] w-[50px] h-[50px]"
           }
         />
-        <div
-          id="wave"
-          className="absolute bg-white sm:w-[40px] w-[30px] h-[50px] bottom-[240px] right-[40px]"
-        ></div>
       </div>
     </Section>
   );
