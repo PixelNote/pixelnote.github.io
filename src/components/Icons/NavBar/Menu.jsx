@@ -1,6 +1,7 @@
-function Menu({ size, color }) {
+function Menu({ id, size, color }) {
   return (
     <svg
+      id={id}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 -960 960 960"
       width={size}

@@ -5,7 +5,7 @@ function Image({ img, tech, even, link }) {
         even ? "images-left" : "images-right"
       } w-[80%] h-auto opacity-0 flex flex-col items-center gap-2`}
     >
-      <div className="border-solid border-4 border-Oxley rounded-xl object-cover">
+      <div className="border-solid border-4 border-Oxley rounded-xl object-cover transform hover:scale-105">
         <a href={link} target="_blank">
           <img
             className="cursor-pointer object-cover w-[100%] h-auto"
