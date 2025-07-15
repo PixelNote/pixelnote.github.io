@@ -1,0 +1,5 @@
+# Ignorar carpetas comunes
+/dist
+/node_modules
+/.angular
+/coverage
