@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Footer } from './footer/footer';
-import { Panel } from './panel/panel';
+import { Panel } from './components/panel/panel';
+import { Taskbar } from './components/footer/taskbar/taskbar';
 
 @Component({
   selector: 'app-root',
-  imports: [Footer, Panel],
+  imports: [Panel, Taskbar],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
